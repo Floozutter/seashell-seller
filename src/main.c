@@ -1,4 +1,5 @@
 #include <SDL2/SDL.h>
+#include "constants.h"
 
 int main(int argc, char * argv[]) {
 	SDL_Init(SDL_INIT_VIDEO);
@@ -7,8 +8,8 @@ int main(int argc, char * argv[]) {
 		"Seashell Seller",
 		SDL_WINDOWPOS_UNDEFINED,
 		SDL_WINDOWPOS_UNDEFINED,
-		640,
-		480,
+		W_WIDTH,
+		W_HEIGHT,
 		0
 	);
 
