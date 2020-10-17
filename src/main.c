@@ -6,10 +6,8 @@ int main(int argc, char * argv[]) {
 
 	SDL_Window * const window = SDL_CreateWindow(
 		"Seashell Seller",
-		SDL_WINDOWPOS_UNDEFINED,
-		SDL_WINDOWPOS_UNDEFINED,
-		W_WIDTH,
-		W_HEIGHT,
+		SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
+		W_WIDTH, W_HEIGHT,
 		0
 	);
 
