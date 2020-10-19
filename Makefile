@@ -7,7 +7,7 @@ all: src/main.c build/ecs.o
 	$(CC) $(CFLAGS) $(LDFLAGS) $< build/*.o -o build/seashell-seller $(LIBS)
 
 build/ecs.o: src/ecs.c
-	$(COMPILE) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 build/.make:
 	mkdir -p build
