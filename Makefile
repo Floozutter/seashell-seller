@@ -8,10 +8,3 @@ all: src/main.c build/ecs.o
 
 build/ecs.o: src/ecs.c
 	$(CC) $(CFLAGS) -c $< -o $@
-
-build/.make:
-	mkdir -p build
-	touch build/.make
-
-clean:
-	rm -rf build
