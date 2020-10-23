@@ -19,9 +19,7 @@ int main(int argc, char * argv[]) {
         return 1;
 	}
 	// Create renderer.
-	SDL_Renderer * const renderer = SDL_CreateRenderer(
-		window, -1, 0
-	);
+	SDL_Renderer * const renderer = SDL_CreateRenderer(window, -1, 0);
 	if (renderer == NULL) {
 		SDL_Log("Unable to create renderer: %s", SDL_GetError());
 		return 1;
