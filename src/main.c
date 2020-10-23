@@ -20,7 +20,7 @@ int main(int argc, char * argv[]) {
 	}
 	// Create renderer.
 	SDL_Renderer * const renderer = SDL_CreateRenderer(
-		window, -1, SDL_RENDERER_SOFTWARE
+		window, -1, 0
 	);
 	if (renderer == NULL) {
 		SDL_Log("Unable to create renderer: %s", SDL_GetError());
