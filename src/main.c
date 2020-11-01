@@ -2,6 +2,9 @@
 #include "constants.h"
 
 int main(int argc, char * argv[]) {
+	// Suppress unused parameter warnings.
+	(void)argc;
+	(void)argv;
 	// Initialize SDL.
 	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0) {
         SDL_Log("Unable to initialize SDL: %s", SDL_GetError());
