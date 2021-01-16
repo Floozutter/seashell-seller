@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.19)
+project(seashell-seller)
+find_package(SDL2 REQUIRED PATHS C:/SDL2-devel-2.0.14-VC/SDL2-2.0.14/)
+include_directories(src/ ${SDL2_INCLUDE_DIRS})
+add_executable(seashell-seller src/main.c src/ecs.c)
+target_link_libraries(seashell-seller ${SDL2_LIBRARIES})
+target_link_options(seashell-seller PRIVATE -SUBSYSTEM:windows -ENTRY:mainCRTStartup)
