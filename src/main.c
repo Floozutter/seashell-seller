@@ -7,7 +7,7 @@ int main(int argc, char * argv[]) {
     (void)argv;
     // init SDL
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0) {
-        SDL_Log("Unable to initialize SDL: %s", SDL_GetError());
+        SDL_LogError(SDL_LOG_CATEGORY_SYSTEM, "couldn't init SDL (%s)!", SDL_GetError());
         return 1;
     }
     // create window
@@ -18,13 +18,13 @@ int main(int argc, char * argv[]) {
         0
     );
     if (window == NULL) {
-        SDL_Log("Unable to create window: %s", SDL_GetError());
+        SDL_LogError(SDL_LOG_CATEGORY_VIDEO, "couldn't create window (%s)!", SDL_GetError());
         return 1;
     }
     // create renderer
     SDL_Renderer * const renderer = SDL_CreateRenderer(window, -1, 0);
     if (renderer == NULL) {
-        SDL_Log("Unable to create renderer: %s", SDL_GetError());
+        SDL_LogError(SDL_LOG_CATEGORY_RENDER, "couldn't create renderer (%s)!", SDL_GetError());
         return 1;
     }
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
