@@ -12,7 +12,7 @@ int main(int argc, char * argv[]) {
     }
     // create window
     SDL_Window * const window = SDL_CreateWindow(
-        "Seashell Seller",
+        "seashell seller",
         SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
         W_WIDTH, W_HEIGHT,
         0
